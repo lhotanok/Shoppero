@@ -174,12 +174,16 @@ function handlePositionButtonClick(row, cellClasses) {
 
 function handleAddItemButtonClick() {
     let addItemButton = document.getElementById("add-item-btn");
-    const forbiddenRegExpressions = [/[^a-z ]/i];
+
+    let forbiddenRegExpressions;
+    fetch("././data/forbidden_regex.json")
+        .then(response => response.json())
+        .then(json => forbiddenRegExpressions = json);
+    
     addItemButton.addEventListener('click', function(ev) {
         let newItemFormField = document.getElementById("new-item-name");
         let newItemName = newItemFormField.value;
         for (let regex of forbiddenRegExpressions) {
-            console.log(regex)
             if (newItemName.match(regex)) {
                 window.alert("Invalid item name given.");
                 ev.preventDefault(); // prevents POST request (POST form)
