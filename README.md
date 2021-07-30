@@ -3,7 +3,7 @@
 
 Single page web application providing easy-to-use shopping list. Add new items to the list, edit their amount or delete the unnecessary ones. Organize the items according to your needs - you can swap their position using the specialized `swap button`.
 
-The list items are stored in the MySQL database. Operations of amount editing and item's deleting are performed asynchronously (using standard AJAX and Rest API).
+The list items are stored in the MySQL database. Operations of amount editing and item's deleting are performed asynchronously (using standard AJAX and Rest API). New item addition is implemented by PHP form processing.
 
 ## App overview
 <img src=".\documentation\gallery\overview.png"/>
