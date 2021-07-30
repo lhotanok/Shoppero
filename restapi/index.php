@@ -103,18 +103,12 @@ function run()
 
     $action = safe_get_value($_GET, 'action', 'string');
 
-    if ($_SERVER['REQUEST_METHOD'] === 'PUT') { // modify existing record in database
-        $put_method_functions = ['amount' => 'set_amount',
-                                 'position' => 'swap_items'];
-        if (array_key_exists($action, $put_method_functions)) {
-            $put_method_functions[$action]($db_model);
-        } else {
-            send_json_response('No method to process query-specified action available');
-        }
-    } elseif ($_SERVER['REQUEST_METHOD'] === 'DELETE') { // delete existing record in database
-        $delete_method_functions = ['delete' => 'delete_item'];
-        if (array_key_exists($action, $delete_method_functions)) {
-            $delete_method_functions[$action]($db_model);
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $post_method_functions = ['amount' => 'set_amount',
+                                 'position' => 'swap_items',
+                                 'delete' => 'delete_item'];
+        if (array_key_exists($action, $post_method_functions)) {
+            $post_method_functions[$action]($db_model);
         } else {
             send_json_response('No method to process query-specified action available');
         }

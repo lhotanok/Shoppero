@@ -220,6 +220,6 @@ document.addEventListener('DOMContentLoaded', function(){
     handleAddItemButtonClick();
 
     const DataModel = module.exports.DataModel;
-	model = new DataModel('restapi/');
+	model = new DataModel('restapi/index.php');
     
 });

@@ -17,7 +17,7 @@ class DataModel {
 	setAmount(id, amount, callback = null)
 	{
 		let query = "?action=amount&id=" + id + "&amount=" + amount;
-		this.fetchResult(query, 'PUT', callback);
+		this.fetchResult(query, 'POST', callback);
 	}
 
 	/**
@@ -29,7 +29,7 @@ class DataModel {
 	deleteItem(id, callback = null)
 	{
 		let query = "?action=delete&id=" + id;
-		this.fetchResult(query, 'DELETE', callback);
+		this.fetchResult(query, 'POST', callback);
 	}
 
 	/**
@@ -42,7 +42,7 @@ class DataModel {
 	swapItemPositions(firstId, secondId, callback = null)
 	{
 		let query = "?action=position&firstId=" + firstId + "&secondId=" + secondId;
-		this.fetchResult(query, 'PUT', callback);
+		this.fetchResult(query, 'POST', callback);
 	}
 
 	/**
