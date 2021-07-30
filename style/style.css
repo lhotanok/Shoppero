@@ -1,0 +1,7 @@
+.element-hidden {
+    display: none;
+}
+.btn-position {
+    position: relative;
+    top: 28px;
+}
