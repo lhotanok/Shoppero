@@ -11,7 +11,8 @@ The list items are stored in the MySQL database. Operations of amount editing an
 ## Write down new list item
 For your convenience an autocomplete is provided. It offers all items that have already appeared in the shopping list. The history of known items is stored in the json file *data/list_items_history.json*. Clearing or deleting this file results in clearing the autocomplete history as well.
 
-<img src=".\documentation\gallery\add_item_autocomplete_1.png" width="450"/>        <img src=".\documentation\gallery\add_item_autocomplete_2.png" width="510"/>
+<img src=".\documentation\gallery\add_item_autocomplete_1.png" height="200" />
+<img src=".\documentation\gallery\add_item_autocomplete_2.png" height="177" />
 
 ### Item name collision
 If you add a new item and you happen to have an item of the same name in your shopping list, no new item is added, only the amount is updated. However, updating the item's amount can be done easier using the `edit button`.
