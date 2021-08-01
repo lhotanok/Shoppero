@@ -6,13 +6,13 @@ Single page web application providing easy-to-use shopping list. Add new items t
 The list items are stored in the MySQL database. Operations of amount editing and item's deleting are performed asynchronously (using standard AJAX and Rest API). New item addition is implemented by PHP form processing.
 
 ## App overview
-<img src=".\documentation\gallery\overview.png"/>
+<img src=".\gallery\overview.png"/>
 
 ## Write down new list item
 For your convenience an autocomplete is provided. It offers all items that have already appeared in the shopping list. The history of known items is stored in the json file *data/list_items_history.json*. Clearing or deleting this file results in clearing the autocomplete history as well.
 
-<img src=".\documentation\gallery\add_item_autocomplete_1.png" height="200" />
-<img src=".\documentation\gallery\add_item_autocomplete_2.png" height="177" />
+<img src=".\gallery\add_item_autocomplete_1.png" height="200" />
+<img src=".\gallery\add_item_autocomplete_2.png" height="177" />
 
 ### Item name collision
 If you add a new item and you happen to have an item of the same name in your shopping list, no new item is added, only the amount is updated. However, updating the item's amount can be done easier using the `edit button`.
@@ -23,7 +23,7 @@ New item's name is checked against the regex stored in *data/forbidden_regex.jso
 ## Edit an existing item
 You can easily change the current amount of the chosen item or delete the item permanently.
 
-<img src=".\documentation\gallery\item_amount_edit.png" />
+<img src=".\gallery\item_amount_edit.png" />
 
 ---
 Application was tested locally with the following setup:
